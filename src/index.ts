@@ -8,16 +8,10 @@ program.name('iwarrenty-scripts')
 .description('CLI tool for parsing Excel files and outputting JSON data for iwarrenty-scripts');
 
 program
-.option('-f, --filepath <path>', 'Path to the Excel file').action(() => {
-    const options = program.opts();
-    const filePath = options.filepath;
-    if (!filePath) {
-        console.error('Please provide the path to the Excel file using --filepath option.');
-        process.exit(1);
-    }
-
-    parseExcel(filePath);
-} );
+.command('parse-excel')
+.description('Parse Excel file and output JSON data')
+.argument('filepath', 'Path to the Excel file')
+.action((filePath) => parseExcel(filePath));
 
 // Parse command-line arguments
 program.parse(process.argv);
