@@ -1,0 +1,18 @@
+{
+  "name": "iwarrenty-scripts",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Chanchal Kumar",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc src/index.ts",
+    "sample-run": "node src/index.js --filepath=sample.xlsx",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@types/node": "^20.11.16",
+    "commander": "^12.0.0",
+    "typescript": "^5.3.3",
+    "xlsx": "^0.18.5"
+  }
+}
